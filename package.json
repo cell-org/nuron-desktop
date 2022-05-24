@@ -56,7 +56,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "nurond": "^0.0.23"
+    "nurond": "^0.0.24"
   },
   "devDependencies": {
     "electron": "^19.0.0",

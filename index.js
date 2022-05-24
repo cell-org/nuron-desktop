@@ -69,7 +69,10 @@ async function createWindow() {
   // Protocol handler for win32
   mainWindow = new BrowserWindow({
     titleBarStyle: 'hidden',
-    titleBarOverlay: true
+    titleBarOverlay: {
+      color: "#1a1920",
+      symbolColor: "white"
+    }
   })
   mainWindow.on('closed', function() {
     mainWindow = null

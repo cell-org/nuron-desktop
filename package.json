@@ -1,0 +1,65 @@
+{
+  "name": "nuron-desktop",
+  "version": "0.0.7",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "node_modules/electron-builder/cli.js --dir",
+    "win": "node node_modules\\electron-builder\\cli.js",
+    "mac": "node_modules/electron-builder/cli.js"
+  },
+  "build": {
+    "appId": "app.nuron",
+    "protocols": [
+      {
+        "name": "nuron",
+        "schemes": [
+          "nuron"
+        ]
+      }
+    ],
+    "productName": "nuron",
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "index.js",
+      "node_modules/",
+      "package.json"
+    ],
+    "mac": {
+      "icon": "build/nuron.png"
+    },
+    "win": {
+      "icon": "build/nuron.png"
+    },
+    "linux": {
+      "icon": "build/nuron.png"
+    }
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "nurond": "^0.0.23"
+  },
+  "devDependencies": {
+    "electron": "^19.0.0",
+    "electron-builder": "^23.0.3"
+  }
+}

@@ -7,7 +7,6 @@ const VERSION = "v0"
 
 
 let mainWindow;
-//if(process.env.NODE_ENV === 'development' && process.platform === 'win32') {
 if (process.defaultApp) {
   if (process.argv.length >= 2) {
     app.setAsDefaultProtocolClient('nuron', process.execPath, [path.resolve(process.argv[1])])
